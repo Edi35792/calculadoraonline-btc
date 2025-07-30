@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Bitcoin Online</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+  <script>
+    function mostrarMensagemSucesso() {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('success')) {
+        const msg = document.createElement('div');
+        msg.className = 'bg-green-600 text-white p-4 rounded mb-4 text-center';
+        msg.innerText = '✅ Comprovante enviado com sucesso! Verifique seu e-mail.';
+        document.body.prepend(msg);
+      }
+    }
+    window.onload = mostrarMensagemSucesso;
+  </script>
+</head>
+<body class="bg-gray-900 text-white">
+  <header class="bg-yellow-500 p-6 text-black text-center">
+    <h1 class="text-3xl font-extrabold">Calculadora de Bitcoin Online</h1>
+    <p class="mt-2 text-lg">Calcule seus lucros e planeje seus investimentos com precisão!</p>
+  </header>
+
+  <section class="max-w-4xl mx-auto p-6">
+    <div class="grid md:grid-cols-2 gap-6">
+      <img src="https://images.unsplash.com/photo-1622643747486-cd5cd6a6582e" alt="Bitcoin" class="rounded-2xl shadow-lg">
+
+      <div>
+        <h2 class="text-2xl font-bold mb-4">Funcionalidades que fazem a diferença:</h2>
+        <ul class="list-disc list-inside space-y-2">
+          <li>📈 Simule lucros e perdas com valor de compra e venda</li>
+          <li>🕒 Cotação em tempo real do Bitcoin</li>
+          <li>📊 Gráficos inteligentes de ganhos</li>
+          <li>🔒 100% segura, sem coleta de dados pessoais</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-800 p-6">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-xl font-semibold mb-2">Ideal para:</h2>
+      <ul class="list-disc list-inside space-y-1">
+        <li>Traders iniciantes e experientes</li>
+        <li>Investidores de longo prazo (HODLers)</li>
+        <li>Entusiastas de criptomoedas</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="bg-yellow-600 text-black p-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-extrabold">Oferta Especial: Apenas R$2,00</h2>
+      <p class="text-lg mt-2">Valor promocional de lançamento. Depois volta para <strong>R$10,00</strong>.</p>
+      <a href="#form-pagamento" class="mt-4 inline-block bg-black text-yellow-400 font-semibold py-3 px-6 rounded-xl shadow-lg hover:bg-gray-800 transition">COMPRAR AGORA</a>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto p-6">
+    <h2 class="text-2xl font-bold mb-4">O que dizem nossos clientes</h2>
+    <blockquote class="italic text-gray-300">“Simplesmente essencial para qualquer investidor em Bitcoin!”<br><span class="font-semibold">— João M., São Paulo</span></blockquote>
+    <blockquote class="italic text-gray-300 mt-4">“Comprei e já recuperei o valor só com o que economizei evitando decisões ruins.”<br><span class="font-semibold">— Carla T., Belo Horizonte</span></blockquote>
+  </section>
+
+  <section class="bg-gray-800 p-6" id="form-pagamento">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-2xl font-bold mb-4 text-center">Pagamento via Pix</h2>
+      <p class="text-center mb-4">Faça o pagamento de <strong>R$2,00</strong> via Pix utilizando o código abaixo:</p>
+      <div class="text-center mb-6">
+        <textarea readonly class="w-full p-3 rounded bg-gray-900 border border-yellow-400 text-yellow-400 text-sm">00020126440014br.gov.bcb.pix0122edisantosadm@gmail.com5204000053039865802BR5924EDI SANTOS DA ANUNCIACAO6015APARECIDA DE GO62070503***63041A4E</textarea>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=00020126440014br.gov.bcb.pix0122edisantosadm@gmail.com5204000053039865802BR5924EDI SANTOS DA ANUNCIACAO6015APARECIDA DE GO62070503***63041A4E" alt="QR Pix" class="mx-auto mt-4 rounded shadow-lg">
+      </div>
+      <p class="text-center mb-6">Após o pagamento, envie o comprovante para liberar seu acesso:</p>
+      <form action="https://formsubmit.co/edisantosadm@gmail.com" method="POST" enctype="multipart/form-data" class="space-y-4">
+        <input type="hidden" name="_subject" value="Novo comprovante de pagamento BTC">
+        <input type="hidden" name="_autoresponse" value="Obrigado pelo seu pagamento! Aqui está o acesso à Calculadora BTC: https://bitcoininvest.my.canva.site/ - Senha de acesso: eh12UE0*">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="box">
+        <input type="hidden" name="_next" value="https://sua-url-de-agradecimento.com/sucesso">
+
+        <div>
+          <label for="nome" class="block font-semibold">Nome completo</label>
+          <input type="text" id="nome" name="nome" required class="w-full p-2 rounded bg-gray-900 border border-gray-600">
+        </div>
+
+        <div>
+          <label for="email" class="block font-semibold">Email</label>
+          <input type="email" id="email" name="email" required class="w-full p-2 rounded bg-gray-900 border border-gray-600">
+        </div>
+
+        <div>
+          <label for="comprovante" class="block font-semibold">Enviar comprovante (imagem ou PDF)</label>
+          <input type="file" id="comprovante" name="comprovante" accept="image/*,application/pdf" required class="w-full p-2 rounded bg-gray-900 border border-gray-600">
+        </div>
+
+        <button type="submit" class="w-full bg-yellow-500 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition">Enviar Comprovante</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="text-center p-4 text-sm text-gray-500 bg-gray-900 border-t border-gray-700">
+    &copy; 2025 Calculadora BTC. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
